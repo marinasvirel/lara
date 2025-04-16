@@ -6,6 +6,7 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,13 +23,96 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         DB::table('nousers')->insert([
-            'first_name' => 'name',
-            'sex'  => 'female',
-            'age'  => '41',
-            'password'  => '123',
-            'salary'  => '300000',
-            'second_name'  => 'surname',
-            'born'  => '1983-04-03',
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
+            [
+                'first_name' => Str::random(10),
+                'sex'  => 'female',
+                'age'  => '41',
+                'password'  => Str::random(20),
+                'salary'  => '300000',
+                'second_name'  => Str::random(30),
+                'born'  => '1983-04-03',
+            ],
         ]);
     }
 }
