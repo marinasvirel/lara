@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -35,6 +36,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -44,6 +46,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -53,6 +56,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -62,6 +66,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -71,6 +76,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -80,6 +86,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -89,6 +96,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -98,6 +106,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
@@ -107,6 +116,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => Str::random(10),
                 'sex'  => 'female',
+                'email' => Str::random(10) . '.com',
                 'age'  => '41',
                 'password'  => Str::random(20),
                 'salary'  => '300000',
