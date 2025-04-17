@@ -10,7 +10,8 @@ class UserController extends Controller
   {
     $users = DB::table('users')
       ->where('age', 30)
-      ->take(3)
+      ->skip(3)
+      ->take(10)
       ->get();
     return view('user.show', ['users' => $users]);
   }
