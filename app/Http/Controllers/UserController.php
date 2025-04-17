@@ -9,8 +9,9 @@ class UserController extends Controller
   public function show()
   {
     $users = DB::table('users')
-    ->where('age', '<=', 30)
-    ->where('age', '>=', 20)
+    ->where('age', 30)
+    ->orWhere('id', '>', 4)
+    ->orWhere('salary', 500)
     ->get();
     return view('user.show', ['users' => $users]);
   }
