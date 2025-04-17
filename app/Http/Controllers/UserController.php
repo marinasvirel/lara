@@ -9,10 +9,10 @@ class UserController extends Controller
   public function show()
   {
     // $users = DB::table('users')
-		// ->whereBetween('age', [30, 40])
+		// ->whereIn('id', [1, 2, 3, 5])
 		// ->get();
     $users = DB::table('users')
-		->whereNotBetween('age', [30, 40])
+		->whereNotIn('id', [1, 2, 3, 5])
 		->get();
     return view('user.show', ['users' => $users]);
   }
