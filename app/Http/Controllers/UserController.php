@@ -8,18 +8,18 @@ class UserController extends Controller
 {
   public function show()
   {
-    $users = DB::table('users')->get();
+    $users = DB::table('users')
+    // ->orderBy('age')
+    ->orderBy('salary', 'desc')
+    ->get();
     return view('user.show', ['users' => $users]);
   }
 
   public function one()
   {
     $user = DB::table('users')
-		->whereIdAndAge(3, 20)
+		->whereId(3)
 		->get();
-    // $user = DB::table('users')
-		// ->whereIdOrAge(3, 20)
-		// ->get();
     return view('user.one', ['user' => $user]);
   }
 
