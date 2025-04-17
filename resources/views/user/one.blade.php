@@ -7,14 +7,12 @@
       <th>Возраст</th>
       <th>Зарплата</th>
     </tr>
-    @foreach ($user as $item)
     <tr>
-      <td>{{ $item->id }}</td>
-      <td>{{ $item->name }}</td>
-      <td>{{ $item->email }}</td>
-      <td>{{ $item->age }}</td>
-      <td>{{ $item->salary }}</td>
+      <td>{{ $user->id }}</td>
+      <td>{{ $user->name }}</td>
+      <td>{{ $user->email }}</td>
+      <td>{{ $user->age }}</td>
+      <td>{{ $user->salary }}</td>
     </tr>
-    @endforeach
   </table>
 </x-layout>

@@ -9,18 +9,20 @@ class UserController extends Controller
   public function show()
   {
     $users = DB::table('users')
-    ->where('age', '>', 30)
-    ->oldest('created_at')
-    // ->latest('created_at')
-    ->get();
+      ->where('age', '<=', 30)
+      ->where('age', '>=', 20)
+      ->inRandomOrder()
+      ->get();
     return view('user.show', ['users' => $users]);
   }
 
   public function one()
   {
     $user = DB::table('users')
-		->whereId(3)
-		->get();
+    ->where('age', '<=', 30)
+    ->where('age', '>=', 20)
+    ->inRandomOrder()
+    ->first();
     return view('user.one', ['user' => $user]);
   }
 
