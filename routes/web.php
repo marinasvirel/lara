@@ -9,3 +9,4 @@ Route::get('/', function () {
 
 Route::get('/users', [UserController::class, 'show']);
 Route::get('/user', [UserController::class, 'one']);
+Route::get('/names', [UserController::class, 'names']);

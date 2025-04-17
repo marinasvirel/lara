@@ -17,4 +17,10 @@ class UserController extends Controller
     $user = DB::table('users')->where('id', 3)->value('email');
     return view('user.one', ['user' => $user]);
   }
+
+  public function names()
+  {
+    $names = DB::table('users')->pluck('name');
+    return view('user.names', ['names' => $names]);
+  }
 }
