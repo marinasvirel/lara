@@ -14,15 +14,12 @@ class UserController extends Controller
 
   public function one()
   {
-    // $user = DB::table('users')
-		// ->whereId(3)
-		// ->get();
-    // $user = DB::table('users')
-		// ->whereName('john')
-		// ->get();
     $user = DB::table('users')
-		->whereEmail('john@mail.com')
+		->whereIdAndAge(3, 20)
 		->get();
+    // $user = DB::table('users')
+		// ->whereIdOrAge(3, 20)
+		// ->get();
     return view('user.one', ['user' => $user]);
   }
 

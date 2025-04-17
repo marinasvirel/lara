@@ -1,6 +1,7 @@
 <x-layout>
   <table>
     <tr>
+      <th>Id</th>
       <th>Имя</th>
       <th>Email</th>
       <th>Возраст</th>
@@ -8,6 +9,7 @@
     </tr>
     @foreach ($user as $item)
     <tr>
+      <td>{{ $item->id }}</td>
       <td>{{ $item->name }}</td>
       <td>{{ $item->email }}</td>
       <td>{{ $item->age }}</td>
