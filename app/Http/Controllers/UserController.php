@@ -8,18 +8,21 @@ class UserController extends Controller
 {
   public function show()
   {
-    // $users = DB::table('users')
-		// ->whereIn('id', [1, 2, 3, 5])
-		// ->get();
-    $users = DB::table('users')
-		->whereNotIn('id', [1, 2, 3, 5])
-		->get();
+    $users = DB::table('users')->get();
     return view('user.show', ['users' => $users]);
   }
 
   public function one()
   {
-    $user = DB::table('users')->where('id', 3)->value('email');
+    // $user = DB::table('users')
+		// ->whereId(3)
+		// ->get();
+    // $user = DB::table('users')
+		// ->whereName('john')
+		// ->get();
+    $user = DB::table('users')
+		->whereEmail('john@mail.com')
+		->get();
     return view('user.one', ['user' => $user]);
   }
 
