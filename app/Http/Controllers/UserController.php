@@ -9,8 +9,9 @@ class UserController extends Controller
   public function show()
   {
     $users = DB::table('users')
-    // ->orderBy('age')
-    ->orderBy('salary', 'desc')
+    ->where('age', '>', 30)
+    ->oldest('created_at')
+    // ->latest('created_at')
     ->get();
     return view('user.show', ['users' => $users]);
   }
