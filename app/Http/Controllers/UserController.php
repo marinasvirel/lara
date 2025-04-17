@@ -8,7 +8,11 @@ class UserController extends Controller
 {
   public function show()
   {
-    $users = DB::table('users')->select('name', 'email as user_email')->get();
+    // $users = DB::table('users')->where('age', 30)->get();
+    // $users = DB::table('users')->where('age', '!=', 30)->get();
+    // $users = DB::table('users')->where('age', '>', 30)->get();
+    // $users = DB::table('users')->where('age', '<', 30)->get();
+    $users = DB::table('users')->where('age', '<=', 30)->get();
     return view('user.show', ['users' => $users]);
   }
 }
