@@ -8,11 +8,10 @@ class UserController extends Controller
 {
   public function show()
   {
-    // $users = DB::table('users')->where('age', 30)->get();
-    // $users = DB::table('users')->where('age', '!=', 30)->get();
-    // $users = DB::table('users')->where('age', '>', 30)->get();
-    // $users = DB::table('users')->where('age', '<', 30)->get();
-    $users = DB::table('users')->where('age', '<=', 30)->get();
+    $users = DB::table('users')
+    ->where('age', '<=', 30)
+    ->where('age', '>=', 20)
+    ->get();
     return view('user.show', ['users' => $users]);
   }
 }
