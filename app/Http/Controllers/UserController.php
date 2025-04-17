@@ -14,7 +14,7 @@ class UserController extends Controller
 
   public function one()
   {
-    $user = DB::table('users')->where('id', 3)->first();
+    $user = DB::table('users')->where('id', 3)->value('email');
     return view('user.one', ['user' => $user]);
   }
 }
