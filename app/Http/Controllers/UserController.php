@@ -8,7 +8,7 @@ class UserController extends Controller
 {
   public function show()
   {
-    $users = DB::table('users')->get();
+    $users = DB::table('users')->select('name', 'email')->get();
     return view('user.show', ['users' => $users]);
   }
 }
