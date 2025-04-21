@@ -86,4 +86,22 @@ class UserController extends Controller
       ],
     ]);
   }
+
+  public function updateOne()
+  {
+    DB::table('users')->where('id', 5)->update([
+      'name' => 'upname',
+      'email'  => 'upemail.com',
+      'age' => 20,
+      'salary' => 20000,
+      'update_at' => date('Y.m.d h:i:s'),
+    ]);
+  }
+
+  public function updateSome()
+  {
+    DB::table('users')->where('age', 30)->update([
+      'salary' => 500,
+    ]);
+  }
 }

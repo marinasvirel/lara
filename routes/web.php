@@ -13,3 +13,5 @@ Route::get('/names', [UserController::class, 'names']);
 Route::get('/createOne', [UserController::class, 'createOne']);
 Route::get('/createOneId', [UserController::class, 'createOneId']);
 Route::get('/createSome', [UserController::class, 'createSome']);
+Route::get('/updateOne', [UserController::class, 'updateOne']);
+Route::get('/updateSome', [UserController::class, 'updateSome']);
