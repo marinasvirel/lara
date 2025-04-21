@@ -104,4 +104,25 @@ class UserController extends Controller
       'salary' => 500,
     ]);
   }
+
+  public function incOne()
+  {
+    DB::table('users')
+      ->where('id', 1)
+      ->increment('age');
+  }
+
+  public function decOne()
+  {
+    DB::table('users')
+      ->where('id', 2)
+      ->decrement('age');
+  }
+
+  public function decSome()
+  {
+    DB::table('users')
+      ->where('age', 30)
+      ->increment('salary', 100);
+  }
 }
