@@ -125,4 +125,23 @@ class UserController extends Controller
       ->where('age', 30)
       ->increment('salary', 100);
   }
+
+  public function delOne()
+  {
+    DB::table('users')
+      ->where('id', 5)
+      ->delete();
+  }
+
+  public function delSome()
+  {
+    DB::table('users')
+      ->where('age', 30)
+      ->delete();
+  }
+
+  public function delAll()
+  {
+    DB::table('users')->delete();
+  }
 }

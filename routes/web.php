@@ -18,3 +18,6 @@ Route::get('/updateSome', [UserController::class, 'updateSome']);
 Route::get('/incOne', [UserController::class, 'incOne']);
 Route::get('/decOne', [UserController::class, 'decOne']);
 Route::get('/decSome', [UserController::class, 'decSome']);
+Route::get('/delOne', [UserController::class, 'delOne']);
+Route::get('/delSome', [UserController::class, 'delSome']);
+Route::get('/delAll', [UserController::class, 'delAll']);
