@@ -30,4 +30,12 @@ class UserController extends Controller
 
     $user->save();
   }
+
+  public function update()
+  {
+    $user = User::find(1);
+    $user->name = 'Updatename';
+
+    $user->save();
+  }
 }
