@@ -3,16 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB; // подключаем фасад DB
+use App\Models\User;
 
 class UserController extends Controller
 {
   public function show()
   {
-    $users = DB::table('users')
-      ->where('age', 30)
-      ->skip(3)
-      ->take(10)
-      ->get();
+    $users = User::all();
     return view('user.show', ['users' => $users]);
   }
 
