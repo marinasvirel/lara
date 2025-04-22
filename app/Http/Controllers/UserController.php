@@ -13,6 +13,12 @@ class UserController extends Controller
     return view('user.show', ['users' => $users]);
   }
 
+  public function one()
+  {
+    $user = User::where('age', 30)->first();
+    return view('user.one', ['user' => $user]);
+  }
+
   public function selectUser()
   {
     // $users = User::where('age', 30);
