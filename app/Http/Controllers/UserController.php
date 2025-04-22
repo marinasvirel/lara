@@ -9,7 +9,7 @@ class UserController extends Controller
 {
   public function show()
   {
-    $users = User::find([3, 4, 5]);
+    $users = User::all();
     return view('user.show', ['users' => $users]);
   }
 
@@ -46,6 +46,11 @@ class UserController extends Controller
 
   public function delSome()
   {
-    User::destroy(4, 5, 6);
+    $deletedRows = User::where('id', '>', 3)->delete();
+  }
+
+  public function recovery()
+  {
+    User::where('id', '>', 3)->restore();
   }
 }
