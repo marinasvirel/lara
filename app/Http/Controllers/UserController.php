@@ -39,8 +39,13 @@ class UserController extends Controller
     $user->save();
   }
 
+  public function delOne()
+  {
+    User::destroy(3);
+  }
+
   public function delSome()
   {
-    $deletedRows = User::where('age', '>', 30)->delete();
+    User::destroy(4, 5, 6);
   }
 }
