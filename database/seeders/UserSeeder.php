@@ -12,12 +12,33 @@ class UserSeeder extends Seeder
   public function run()
   {
     DB::table('users')->insert([
-      'name' => Str::random(20),
-      'email' => Str::random(10) . "com",
-      'age' => 30,
-      'salary' => 30000,
-      'created_at' => '2025-04-16 08:22:28.000000',
-      'update_at' => '2025-04-16 08:22:28.000000',
+      [
+        'name' => Str::random(20) . 'name',
+        'email' => Str::random(10) . "com",
+        'age' => 30,
+        'salary' => 30000,
+        'created_at' => date('Y.m.d h:i:s'),
+        'update_at' => date('Y.m.d h:i:s'),
+        'city_id' => 1,
+      ],
+      [
+        'name' => Str::random(20) . 'name',
+        'email' => Str::random(10) . "com",
+        'age' => 30,
+        'salary' => 30000,
+        'created_at' => date('Y.m.d h:i:s'),
+        'update_at' => date('Y.m.d h:i:s'),
+        'city_id' => 1,
+      ],
+      [
+        'name' => Str::random(20) . 'name',
+        'email' => Str::random(10) . "com",
+        'age' => 30,
+        'salary' => 30000,
+        'created_at' => date('Y.m.d h:i:s'),
+        'update_at' => date('Y.m.d h:i:s'),
+        'city_id' => 2,
+      ],
     ]);
   }
 }

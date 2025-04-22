@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('salary');
             $table->dateTime('created_at');
             $table->dateTime('update_at');
+            $table->integer('city_id');
         });
 
         Schema::create('sessions', function (Blueprint $table) {

@@ -21,3 +21,4 @@ Route::get('/decSome', [UserController::class, 'decSome']);
 Route::get('/delOne', [UserController::class, 'delOne']);
 Route::get('/delSome', [UserController::class, 'delSome']);
 Route::get('/delAll', [UserController::class, 'delAll']);
+Route::get('/myLeftJoin', [UserController::class, 'myLeftJoin']);

@@ -144,4 +144,12 @@ class UserController extends Controller
   {
     DB::table('users')->delete();
   }
+
+  public function myLeftJoin()
+  {
+    $users = DB::table('users')
+      ->leftJoin('cities', 'cities.id', '=', 'users.city_id')
+      ->get();
+    dump($users);
+  }
 }
