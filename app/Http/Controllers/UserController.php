@@ -13,140 +13,20 @@ class UserController extends Controller
     return view('user.show', ['users' => $users]);
   }
 
-  public function one()
+  public function selectUser()
   {
-    $user = DB::table('users')
-      ->where('age', '<=', 30)
-      ->where('age', '>=', 20)
-      ->inRandomOrder()
-      ->first();
-    return view('user.one', ['user' => $user]);
-  }
+    // $users = User::where('age', 30);
 
-  public function names()
-  {
-    $names = DB::table('users')->pluck('name');
-    return view('user.names', ['names' => $names]);
-  }
+    // $users = User::where('salary', '>=', 100)
+    //   ->where('salary', '<=', 300)
+    //   ->get();
 
-  public function createOne()
-  {
-    DB::table('users')->insert([
-      'name' => 'name',
-      'email'  => 'email.com',
-      'age' => 40,
-      'salary' => 40000,
-      'created_at' => date('Y.m.d h:i:s'),
-      'update_at' => date('Y.m.d h:i:s'),
-    ]);
-  }
+    // $users = User::skip(4)->take(5)->get();
 
-  public function createOneId()
-  {
-    $id = DB::table('users')->insertGetId([
-      'name' => 'idname',
-      'email'  => 'idemail.com',
-      'age' => 40,
-      'salary' => 40000,
-      'created_at' => date('Y.m.d h:i:s'),
-      'update_at' => date('Y.m.d h:i:s'),
-    ]);
-    echo $id;
-  }
-
-  public function createSome()
-  {
-    DB::table('users')->insert([
-      [
-        'name' => '1name',
-        'email'  => '1email.com',
-        'age' => 40,
-        'salary' => 40000,
-        'created_at' => date('Y.m.d h:i:s'),
-        'update_at' => date('Y.m.d h:i:s'),
-      ],
-      [
-        'name' => '2name',
-        'email'  => '2email.com',
-        'age' => 40,
-        'salary' => 40000,
-        'created_at' => date('Y.m.d h:i:s'),
-        'update_at' => date('Y.m.d h:i:s'),
-      ],
-      [
-        'name' => '3name',
-        'email'  => '3email.com',
-        'age' => 40,
-        'salary' => 40000,
-        'created_at' => date('Y.m.d h:i:s'),
-        'update_at' => date('Y.m.d h:i:s'),
-      ],
-    ]);
-  }
-
-  public function updateOne()
-  {
-    DB::table('users')->where('id', 5)->update([
-      'name' => 'upname',
-      'email'  => 'upemail.com',
-      'age' => 20,
-      'salary' => 20000,
-      'update_at' => date('Y.m.d h:i:s'),
-    ]);
-  }
-
-  public function updateSome()
-  {
-    DB::table('users')->where('age', 30)->update([
-      'salary' => 500,
-    ]);
-  }
-
-  public function incOne()
-  {
-    DB::table('users')
-      ->where('id', 1)
-      ->increment('age');
-  }
-
-  public function decOne()
-  {
-    DB::table('users')
-      ->where('id', 2)
-      ->decrement('age');
-  }
-
-  public function decSome()
-  {
-    DB::table('users')
-      ->where('age', 30)
-      ->increment('salary', 100);
-  }
-
-  public function delOne()
-  {
-    DB::table('users')
-      ->where('id', 5)
-      ->delete();
-  }
-
-  public function delSome()
-  {
-    DB::table('users')
-      ->where('age', 30)
-      ->delete();
-  }
-
-  public function delAll()
-  {
-    DB::table('users')->delete();
-  }
-
-  public function myLeftJoin()
-  {
-    $users = DB::table('users')
-      ->leftJoin('cities', 'cities.id', '=', 'users.city_id')
+    $users = User::whereIn('id', [1, 3, 4, 5])
       ->get();
+
+
     dump($users);
   }
 }
