@@ -18,4 +18,16 @@ class UserController extends Controller
     $user = User::find(3);
     return view('user.one', ['user' => $user]);
   }
+
+  public function create()
+  {
+    $user = new User();
+    $user->name = 'Createname';
+    $user->email = 'email.com';
+    $user->age = 20;
+    $user->salary = 200;
+    $user->city_id = 2;
+
+    $user->save();
+  }
 }
