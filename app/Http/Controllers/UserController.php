@@ -15,7 +15,7 @@ class UserController extends Controller
 
   public function one()
   {
-    $user = User::find(3);
+    $user = User::find(3)->profile;
     return view('user.one', ['user' => $user]);
   }
 

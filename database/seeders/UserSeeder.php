@@ -13,31 +13,16 @@ class UserSeeder extends Seeder
   {
     DB::table('users')->insert([
       [
-        'name' => Str::random(20) . 'name',
-        'email' => Str::random(10) . "com",
-        'age' => 30,
-        'salary' => 30000,
-        'city_id' => 1,
-        'updated_at' => date('Y.m.d h:i:s'),
-        'created_at' => date('Y.m.d h:i:s'),
+        'login' => Str::random(20) . 'login',
+        'password' => Str::random(10) . "password",
       ],
       [
-        'name' => Str::random(20) . 'name',
-        'email' => Str::random(10) . "com",
-        'age' => 30,
-        'salary' => 30000,
-        'city_id' => 1,
-        'updated_at' => date('Y.m.d h:i:s'),
-        'created_at' => date('Y.m.d h:i:s'),
+        'login' => Str::random(20) . 'login',
+        'password' => Str::random(10) . "password",
       ],
       [
-        'name' => Str::random(20) . 'name',
-        'email' => Str::random(10) . "com",
-        'age' => 30,
-        'salary' => 30000,
-        'city_id' => 2,
-        'updated_at' => date('Y.m.d h:i:s'),
-        'created_at' => date('Y.m.d h:i:s'),
+        'login' => Str::random(20) . 'login',
+        'password' => Str::random(10) . "password",
       ],
     ]);
   }

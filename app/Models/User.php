@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Profile;
 
 class User extends Model
 {
-    use SoftDeletes;
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
 }
