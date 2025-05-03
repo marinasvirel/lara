@@ -9,7 +9,13 @@ class UserController extends Controller
 {
   public function show()
   {
-    $users = User::all();
+    $all = User::all();
+    $profiles = [];
+    foreach ($all as $key => $value) {
+      $profiles[] = $value->profile;
+    }
+    $users = $profiles;
+
     return view('user.show', ['users' => $users]);
   }
 
