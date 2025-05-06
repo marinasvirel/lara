@@ -13,10 +13,40 @@ class CitySeeder extends Seeder
   {
     DB::table('cities')->insert([
       [
-        'name' => 'Kiev',
+        'name' => 'city11',
+        'country_id' => 1
       ],
       [
-        'name' => 'Minsk',
+        'name' => 'city12',
+        'country_id' => 1
+      ],
+      [
+        'name' => 'city13',
+        'country_id' => 1
+      ],
+      [
+        'name' => 'city21',
+        'country_id' => 2
+      ],
+      [
+        'name' => 'city22',
+        'country_id' => 2
+      ],
+      [
+        'name' => 'city23',
+        'country_id' => 2
+      ],
+      [
+        'name' => 'city31',
+        'country_id' => 3
+      ],
+      [
+        'name' => 'city32',
+        'country_id' => 3
+      ],
+      [
+        'name' => 'city33',
+        'country_id' => 3
       ],
     ]);
   }
