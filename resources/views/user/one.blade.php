@@ -11,12 +11,12 @@
     </tr>
     <tr>
       <td>{{ $user->id }}</td>
-      <td>{{ $user->name }}</td>
-      <td>{{ $user->surname }}</td>
-      <td>{{ $user->email }}</td>
+      <td>{{ $profile->name }}</td>
+      <td>{{ $profile->surname }}</td>
+      <td>{{ $profile->email }}</td>
       <td>{{ $user->login }}</td>
       <td>{{ $user->password }}</td>
-      <td>{{ $user->user_id }}</td>
+      <td>{{ $profile->user_id }}</td>
     </tr>
   </table>
 </x-layout>

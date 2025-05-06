@@ -11,13 +11,13 @@
     </tr>
     @foreach ($users as $user)
     <tr>
-      <td>{{ $user->id }}</td>
-      <td>{{ $user->name }}</td>
-      <td>{{ $user->surname }}</td>
-      <td>{{ $user->email }}</td>
-      <td>{{ $user->login }}</td>
-      <td>{{ $user->password }}</td>
-      <td>{{ $user->user_id }}</td>
+      <td>{{ $user['id'] }}</td>
+      <td>{{ $user['login'] }}</td>
+      <td>{{ $user['password'] }}</td>
+      <td>{{ $user['name'] }}</td>
+      <td>{{ $user['surname'] }}</td>
+      <td>{{ $user['email'] }}</td>
+      <td>{{ $user['user_id'] }}</td>
     </tr>
     @endforeach
   </table>
