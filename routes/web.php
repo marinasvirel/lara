@@ -14,7 +14,7 @@ Route::get('/', function () {
 // Route::get('/user', [UserController::class, 'one']);
 
 Route::get('/users', [ProfileController::class, 'show']);
-Route::get('/user', [ProfileController::class, 'one']);
+Route::get('/user', [UserController::class, 'one']);
 
 Route::get('/countries', [CityController::class, 'show']);
 

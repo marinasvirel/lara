@@ -21,8 +21,8 @@ class UserController extends Controller
 
   public function one()
   {
-    $user = User::find(3)->profile;
-    return view('user.one', ['user' => $user]);
+    $user = User::with(['city', 'position'])->first();
+    dump($user);
   }
 
   public function create()

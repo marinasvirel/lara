@@ -11,4 +11,14 @@ class User extends Model
     {
         return $this->hasOne(Profile::class);
     }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
+    public function position()
+    {
+        return $this->belongsTo(Position::class);
+    }
 }

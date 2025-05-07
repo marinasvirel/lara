@@ -7,19 +7,19 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
-class CitySeeder extends Seeder
+class PositionSeeder extends Seeder
 {
   public function run()
   {
-    DB::table('cities')->insert([
+    DB::table('positions')->insert([
       [
-        'name' => 'city1',
+        'name' => 'position 1',
       ],
       [
-        'name' => 'city2',
+        'name' => 'position 2',
       ],
       [
-        'name' => 'city3',
+        'name' => 'position 3',
       ],
     ]);
   }
