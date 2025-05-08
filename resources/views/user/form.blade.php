@@ -1,8 +1,9 @@
 <x-layout>
-  <form action="/result">
-    <input type="number" name="num1" placeholder="num1">
-    <input type="number" name="num2" placeholder="num2">
-    <input type="number" name="num3" placeholder="num3">
+  <form action="/result" method="POST">
+    @csrf
+    <input type="text" name="name" placeholder="имя">
+    <input type="number" name="age" placeholder="возраст">
+    <input type="number" name="salary" placeholder="зарплата">
     <input type="submit">
   </form>
 </x-layout>

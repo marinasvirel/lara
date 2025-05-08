@@ -15,13 +15,15 @@ class UserController extends Controller
 
   public function result(Request $request)
   {
-    $arr = [
-      $request->input('num1'),
-      $request->input('num2'),
-      $request->input('num3'),
-    ];
-    $sum = array_sum($arr);
-    return view('user.result', ['sum' => $sum]);
+    $name = $request->input('name');
+    $age = $request->input('age');
+    $salary = $request->input('salary');
+
+    return view('user.result', [
+      'name' => $name,
+      'age' => $age,
+      'salary' => $salary,
+    ]);
   }
 
   public function show()
