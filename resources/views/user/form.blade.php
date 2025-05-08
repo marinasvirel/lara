@@ -1,6 +1,11 @@
 <x-layout>
-  <p>город: {{ $city }}</p>
-  <p>страна: {{ $country }}</p>
+  @if(!empty($data))
+  <ul>
+    <li>{{ $data['city']}}</li>
+    <li>{{ $data['country']}}</li>
+  </ul>
+  @endif
+
   <form action="" method="POST">
     @csrf
     <input type="text" name="city" placeholder="город">

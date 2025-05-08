@@ -10,16 +10,10 @@ class UserController extends Controller
 {
   public function form(Request $request)
   {
-    $city = "";
-    $country = "";
-    
-    if ($request->has('city') and $request->has('country')) {
-      $city = $request->input('city');
-      $country = $request->input('country');
-    }
+    $data = $request->all();
+
     return view('user.form', [
-      'city' => $city,
-      'country' => $country,
+      'data' => $data,
     ]);
   }
 }
