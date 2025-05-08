@@ -3,10 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB; // подключаем фасад DB
+use Illuminate\Http\Request; // подключим класс Request
 use App\Models\User;
 
 class UserController extends Controller
 {
+  public function form()
+  {
+    return view('user.form');
+  }
+
+  public function result(Request $request)
+  {
+    $arr = [
+      $request->input('num1'),
+      $request->input('num2'),
+      $request->input('num3'),
+    ];
+    $sum = array_sum($arr);
+    return view('user.result', ['sum' => $sum]);
+  }
+
   public function show()
   {
     $users = User::all();
