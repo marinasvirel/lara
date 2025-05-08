@@ -1,8 +1,9 @@
 <x-layout>
   @if(!empty($data))
   <ul>
-    <li>{{ $data['name']}}</li>
-    <li>{{ $data['login']}}</li>
+    @foreach($data as $key => $value)
+    <li>{{ $value }}</li>
+    @endforeach
   </ul>
   @endif
 

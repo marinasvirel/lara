@@ -10,7 +10,7 @@ class UserController extends Controller
 {
   public function form(Request $request)
   {
-    $data = $request->only('name', 'login');
+    $data = $request->except('_token', 'password', 'email');
 
     return view('user.form', [
       'data' => $data,
