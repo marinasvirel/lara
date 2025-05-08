@@ -10,7 +10,7 @@ class UserController extends Controller
 {
   public function form(Request $request)
   {
-    $data = $request->all();
+    $data = $request->only('name', 'login');
 
     return view('user.form', [
       'data' => $data,
