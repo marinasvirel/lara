@@ -11,20 +11,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/users', [UserController::class, 'show']);
-// Route::get('/user', [UserController::class, 'one']);
-
-Route::get('/users', [UserController::class, 'show']);
-Route::get('/roles', [RoleController::class, 'show']);
-Route::get('/user', [UserController::class, 'one']);
-
-Route::get('/countries', [CityController::class, 'show']);
-
-Route::get('/create', [UserController::class, 'create']);
-Route::get('/update', [UserController::class, 'update']);
-Route::get('/delOne', [UserController::class, 'delOne']);
-Route::get('/delSome', [UserController::class, 'delSome']);
-Route::get('/recovery', [UserController::class, 'recovery']);
-
-Route::get('/form', [UserController::class, 'form']);
-Route::post('/result', [UserController::class, 'result']);
+Route::match(['get', 'post'], '/form', [UserController::class, 'form']);
