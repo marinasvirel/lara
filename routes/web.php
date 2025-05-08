@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\UserController;
@@ -13,7 +14,8 @@ Route::get('/', function () {
 // Route::get('/users', [UserController::class, 'show']);
 // Route::get('/user', [UserController::class, 'one']);
 
-Route::get('/users', [ProfileController::class, 'show']);
+Route::get('/users', [UserController::class, 'show']);
+Route::get('/roles', [RoleController::class, 'show']);
 Route::get('/user', [UserController::class, 'one']);
 
 Route::get('/countries', [CityController::class, 'show']);

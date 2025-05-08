@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('city_id');
-            $table->string('position_id');
         });
 
         Schema::create('sessions', function (Blueprint $table) {

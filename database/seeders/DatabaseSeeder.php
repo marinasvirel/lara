@@ -21,9 +21,11 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             // CitySeeder::class,
             // ProfileSeeder::class,
-            CitySeeder::class,
+            // CitySeeder::class,
             // CountrySeeder::class,
-            PositionSeeder::class,
+            // PositionSeeder::class,
+            RoleSeeder::class,
+            UserRoleSeeder::class,
         ]);
     }
 }

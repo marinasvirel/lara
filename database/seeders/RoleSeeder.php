@@ -7,19 +7,19 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 
-class UserSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
   public function run()
   {
-    DB::table('users')->insert([
+    DB::table('roles')->insert([
       [
-        'name' => Str::random(20) . 'name',
+        'name' => 'role 1',
       ],
       [
-        'name' => Str::random(20) . 'name',
+        'name' => 'role 2',
       ],
       [
-        'name' => Str::random(20) . 'name',
+        'name' => 'role 3',
       ],
     ]);
   }
