@@ -1,13 +1,5 @@
 <x-layout>
-  @if(!empty($data))
-  <ul>
-    @foreach($data as $key => $value)
-    <li>{{ $value }}</li>
-    @endforeach
-  </ul>
-  @endif
-
-  <form action="" method="POST">
+  <form action="/user/2/login2" method="GET">
     @csrf
     <input type="text" name="name" placeholder="имя">
     <input type="text" name="surname" placeholder="фамилия">

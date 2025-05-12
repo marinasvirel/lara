@@ -11,4 +11,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::match(['get', 'post'], '/form', [UserController::class, 'form']);
+Route::get('/form', [UserController::class, 'form']);
+Route::get('/user/{id}/{login}', [UserController::class, 'test']);

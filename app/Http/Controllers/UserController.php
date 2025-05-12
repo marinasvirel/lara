@@ -8,12 +8,14 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-  public function form(Request $request)
+  public function form()
   {
-    $data = $request->except('_token', 'password', 'email');
 
-    return view('user.form', [
-      'data' => $data,
-    ]);
+    return view('user.form');
+  }
+
+  public function test(Request $request, $id, $login)
+  {
+    echo "id = $id, login = $login";
   }
 }
