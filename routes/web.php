@@ -12,3 +12,6 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [UserController::class, 'all']);
+Route::get('/user/del/{id}', [UserController::class, 'myDelete']);
+Route::match(['get', 'post'], '/create', [UserController::class, 'create']);
+Route::match(['get', 'post'], '/user/update/{id}', [UserController::class, 'myUpdate']);
