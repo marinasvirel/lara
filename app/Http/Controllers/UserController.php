@@ -8,32 +8,10 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-  public function form()
+  public function all()
   {
-
-    return view('user.form');
-  }
-
-  public function test(Request $request, $id, $login)
-  {
-    echo "id = $id, login = $login";
-  }
-
-  public function request(Request $request)
-  {
-    echo $request->method();
-    echo "<br>";
-    echo $request->path();
-    echo "<br>";
-    echo $request->url();
-    echo "<br>";
-    echo $request->fullUrl();
-    echo "<br>";
-
-    if ($request->is('test/*')) {
-      echo "test";
-    } else {
-      echo "no test";
-    }
+    $users = DB::table('users')->simplePaginate(2);
+    //dump($users);
+    return view('user.all', ['users' => $users]);
   }
 }

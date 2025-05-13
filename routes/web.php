@@ -11,7 +11,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/form', [UserController::class, 'form']);
-Route::get('/user/{id}/{login}', [UserController::class, 'test']);
-
-Route::get('/test/method/{param}', [UserController::class, 'request']);
+Route::get('/users', [UserController::class, 'all']);
