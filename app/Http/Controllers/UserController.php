@@ -18,4 +18,22 @@ class UserController extends Controller
   {
     echo "id = $id, login = $login";
   }
+
+  public function request(Request $request)
+  {
+    echo $request->method();
+    echo "<br>";
+    echo $request->path();
+    echo "<br>";
+    echo $request->url();
+    echo "<br>";
+    echo $request->fullUrl();
+    echo "<br>";
+
+    if ($request->is('test/*')) {
+      echo "test";
+    } else {
+      echo "no test";
+    }
+  }
 }

@@ -13,3 +13,5 @@ Route::get('/', function () {
 
 Route::get('/form', [UserController::class, 'form']);
 Route::get('/user/{id}/{login}', [UserController::class, 'test']);
+
+Route::get('/test/method/{param}', [UserController::class, 'request']);
