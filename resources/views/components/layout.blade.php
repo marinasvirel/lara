@@ -10,10 +10,12 @@
 <body>
   <x-header />
   <main>
+    <x-main.menu.nav />
     {{ $slot }}
   </main>
   <x-aside />
   <x-footer />
+  <x-footer.info />
 </body>
 
 </html>
