@@ -20,7 +20,15 @@
   <x-sidebar.info-block />
   <x-sidebar.left.info-block />
   <x-info>некоторый текст</x-info>
-  <x-info> путь к картинке логотипа</x-info>
+  <x-logo>
+    <x-slot:alt>
+      атрибут alt картинки
+    </x-slot>
+    <x-slot:title>
+      атрибут title картинки
+    </x-slot>
+     путь к картинке логотипа
+    </x-logo>
 </body>
 
 </html>
