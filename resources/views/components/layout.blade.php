@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ $title }}</title>
+  <title>Title</title>
 </head>
 
 <body>
-  <header></header>
+  <x-header />
   <main>
     {{ $slot }}
   </main>
-  <aside class="aside-left"></aside>
-  <aside class="aside-right"></aside>
-  <footer></footer>
+  <x-aside />
+  <x-footer />
 </body>
 
 </html>
