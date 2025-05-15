@@ -16,6 +16,9 @@
   <x-aside />
   <x-footer />
   <x-footer.info />
+  <x-info-block />
+  <x-sidebar.info-block />
+  <x-sidebar.left.info-block />
 </body>
 
 </html>
