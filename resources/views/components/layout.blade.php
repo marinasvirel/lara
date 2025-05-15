@@ -19,6 +19,8 @@
   <x-info-block />
   <x-sidebar.info-block />
   <x-sidebar.left.info-block />
+  <x-info>некоторый текст</x-info>
+  <x-info> путь к картинке логотипа</x-info>
 </body>
 
 </html>
