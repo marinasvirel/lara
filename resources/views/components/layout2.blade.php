@@ -9,11 +9,11 @@
 </head>
 
 <body>
-  <header>header</header>
+  <header>header2</header>
   <main>
     {{ $slot }}
   </main>
-  <footer>footer</footer>
+  <footer>footer2</footer>
 </body>
 
 </html>

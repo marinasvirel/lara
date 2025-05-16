@@ -1,5 +1,7 @@
 <x-layout>
-  <table border="1">
+  <x-slot:title>all</x-slot>
+  <x-slot:desc>Описание страницы</x-slot>
+  <table>
     <tr>
       <th>id</th>
       <th>Имя</th>
